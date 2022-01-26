@@ -90,25 +90,53 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> 
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
+        <p>Are your eyes watery or itchy?</p>  
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No</a>
     	</div>
 </div>
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Do you have a fever?</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Content of page 2 goes here.</p>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
 	</div>
 </div>	
+	
+<div class="page" id="three"> <!--Added a division that produces a new page of the survey.-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Do you have a sore throat?</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Content of page 3 goes here.</p>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+	</div>
+</div> <!--Added a division that signals the end of the division and of the current page.-->
+	
+<div class="page" id="four"> <!--Added a division that produces a new page of the survey.-->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Are your symptoms seasonal or chronic?</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Content of page 4 goes here.</p>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No</a>
+	</div>
+</div> <!--Added a division that signals the end of the division and of the current page.-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
