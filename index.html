@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Samantha Fisher
+Samantha Fisher <!--Added my name as a contributor.-->
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,17 +17,17 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of the code is to create a web-based app that can tell you if you have a cold or allergies based on what symptoms you are experiencing. 
+The goal of the code is to create a web-based app that can tell you if you have a cold or allergies based on what symptoms you are experiencing. <!-Added that the goal of the app is to diagnose a cold or allergies.--> 
  
 Known Issues:
-One known issue I enncountered was getting the results to show up on the results page. At first, there was just the results button and when you clicked it nothing showed up. I realized that my results function was missing a percentage sign. Another known issue was trying to figure out how to get my survey to transition to the next page. I realized that my problem was I had all of the buttons after the first page redirecting the survey back to the second page.
+One known issue I enncountered was getting the results to show up on the results page. At first, there was just the results button and when you clicked it nothing showed up. I realized that my results function was missing a percentage sign. Another known issue was trying to figure out how to get my survey to transition to the next page. I realized that my problem was I had all of the buttons after the first page redirecting the survey back to the second page. <!--Added problems I encountered that prevented my app from running smoothly.-->
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
    <head> 
-      <title>Cold or Allergy</title>  <!--Changed the title of the app.-->
+      <title>Cold or Allergy</title>  <!--Changed the title of the app to display its purpose.-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -48,7 +48,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	
-	function Resultspercentage(){ //Added a function that will show if the symptoms are related to the flu or allergies
+	function Resultspercentage(){ //Added a function that will calculate the percentage of cold symptoms and percentage of allergy symptoms
 	var resultText = document.getElementById("results"); //Demonstrates the content of my results paragraph
 	var coldPercent= (cold_count/4)*100; //Calculates the percentage of cold symptoms
 	var allergyPercent= (allergy_count/4)*100; //Calculates the percentate of allergy symptoms
@@ -89,7 +89,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--Button directs survey to the first page with the first question.--> 
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -101,8 +101,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>  <!--The first question of the survey.--> 
-		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+        <p>Are your eyes watery or itchy?</p>  <!--Added the first question of the survey.--> 
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- These next two lines are the buttons that will record the values on the variable. Buttons will take the survey to the second page with the second question.-->
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No</a>
     	</div><!--/content-->
 </div> <!--Added a division that signals the end of the division and of the current page.-->
@@ -114,7 +114,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a fever?</p> <!--The second question of the survey.-->
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!-- These next two lines are the buttons that will record the values on the variable. Buttons will take the survey to the third page with the third question.-->
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> 
 	</div><!--/content-->
 </div> <!--Added a division that signals the end of the division and of the current page.-->
@@ -126,7 +126,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a sore throat?</p> <!--The third question of the survey.-->
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!-- These next two lines are the buttons that will record the values on the variable. Buttons will take the survey to the fourth page with the fourth question.--->
 		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
 	</div><!--/content-->
 </div> <!--Added a division that signals the end of the division and of the current page.-->
@@ -138,7 +138,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p> <!--The fourth question of the survey.-->
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- These next two lines are the buttons that will record the values on the variable.Buttons will take the survey to the fifth page with the results.-->
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No</a>
 		
 	</div><!--/content-->
