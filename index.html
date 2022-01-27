@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Hello World</title>  
+      <title>Cold or Allergy</title>  <!--Changed the title of the app.-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -49,6 +49,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function Resultspercentage(){. //Added a function that will show if the symptoms are related to the flu or allergies
+	var resultText = document.getElementById("results"); //Demonstrates the content of my results paragraph
+	var coldpercent= (cold_count/4)*100 //Calculates the percentage of cold symptoms
+	var allergypercent= (allergy_count/4)*100 //Calculates the percentate of allergy symptoms
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //Calculates the probability of whether it is a cold or allergies
+
 
   </script>
 
@@ -135,8 +142,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Content of page 4 goes here.</p>
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- These next two lines are the buttons that will record the values on the variable.-->
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No</a>
+		
 	</div>
 </div> <!--Added a division that signals the end of the division and of the current page.-->
+	
+<div class="page" id="five"> <!--Added a division that produces a new page of the survey.-->
+	<div class="w3-container w3-flat-carrot"> <!--Header of the fifth page.-->
+	<a onclick="Resultspercentage();" class="w3-btn w3-black"> <!-- This button will run a function that shows the results of the survey.-->
+	<p id="results"></p> <!--Identifies where results are going to be displayed.-->
+	</div>
+</div> <!--Added a division that signals the end of the division and of the current page.-->
+	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
